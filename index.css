@@ -1,0 +1,99 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    width: 450px;
+    background: #5dbcf6;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.box {
+    width: 350px;
+    background: #fff;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0.2rem 3rem #8888;
+    padding: 30px;
+    margin: 20px;
+    color: #c0c0c0;
+    position: relative;
+    overflow: hidden;
+}
+
+.tweet {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tweet::before {
+    content: '';
+    position: absolute;
+    top: -130px;
+    right: -30px;
+    width: 90px;
+    height: 200px;
+    background: #adcde1;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.5);
+}
+
+.tweet img {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: -25px;
+    top: -7px;
+    cursor: pointer;
+    animation: ribbon 1s linear;
+}
+
+.tweet:hover img {
+    animation: ribbon 1s linear;
+}
+
+@keyframes ribbon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.quote-icon {
+    font-size: 2.4rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.quote {
+    padding: 25px 5px 0;
+    font-size: 1.4rem;
+}
+
+.author {
+    margin-bottom: 20px;
+}
+
+.button {
+    cursor: pointer;
+    background-color: #5dbcf6;
+    padding: 20px;
+    color: #fff;
+}
